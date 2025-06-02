@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import personService from './services/persons'
-import Notification from './components/Notification'
+import Notifications from './components/Notifications'
 
 const App = () => {
   const [persons, setPersons] = useState([])
@@ -70,7 +70,7 @@ const App = () => {
   return (
     <div>
       <h2>Agenda Telefónica</h2>
-      <Notification message={notification} />
+      <Notifications message={notification} />
       <form onSubmit={handleSubmit}>
         <div>
           nombre: <input value={newName} onChange={e => setNewName(e.target.value)} />
